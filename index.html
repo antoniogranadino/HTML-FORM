@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="container border border-secondary-subtle rounded">
+        <!--Header-->
+        <div class="row bg-light mb-2 p-2">
+            <div class="col-12">
+                <h1 class="fs-2">Payment for example</h1>    
+            </div>
+        </div>
+
+        <!--Alert-->
+        <div class="row mx-1">
+            <div class="col alert alert-danger p-2" id="alerta" role="alert">
+                Some fields are missing
+            </div>
+        </div>
+
+        <form>
+            <!--body-top-->
+            <div class="row mb-4">
+                <div class="col-4">
+                    <label for="card" class="form-label">Card #</label>
+                    <input type="text" id="card" aria-label="Card" class="form-control" placeholder="XXXXXXXXXXXXXXXX">
+                </div>
+                <div class="col-4">
+                    <label for="cvc" class="form-label">CVC #</label>
+                    <input type="text" id="cv" aria-label="CVC" class="form-control" placeholder="0000">
+                </div>
+                <div class="col-4">
+                    <label for="amount" class="form-label">Amount</label>
+                    <div class="d-flex">
+                        <span><i class="fa-solid fa-dollar-sign"></i></span>
+                         <input type="text" id="amount" aria-label="Amount" class="form-control" placeholder="Amount">
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <label for="first name">First Name</label>
+                    <input type="text" id="first name" aria-label="first name" class="form-control">
+                </div>
+                <div class="col">
+                    <label for="last name">Last Name</label>
+                    <input type="text" id="last name" aria-label="last name" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label for="city">City</label>
+                    <input type="text" id="city" aria-label="city" class="form-control">
+                </div>
+                <div class="col-3 mb-4">
+                    <div>
+                        <label for="state">State</label>
+                    </div>
+                    <select class="form-select" aria-label="Default select example" id="state">
+                        <option selected>Pick a state</option>
+                        <option value="1">State #1</option>
+                        <option value="2">State #2</option>
+                        <option value="3">State #3</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="postal code">Postal Code</label>
+                    <input type="text" id="postal code" aria-label="postal code" class="form-control">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col">
+                    <div class="mb-2">
+                        <label for="payment method" class="form-label">We accept:</label>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex p-2  gap-4 border border-secondary-subtle rounded bg-secondary">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i> </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-diners-club"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                            <label class="form-check-label" for="inlineRadio4"><i class="fa-brands fa-cc-paypal"></i></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="payment method" class="form-label">Message</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
+                    <div class="mt-2">
+                        <p>
+                            Add any notes here
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end gap-2 p-2 bg-light mt-2">
+                    <button class="btn bg-secondary text-white" type="button">Cancel</button>
+                    <button class="btn bg-primary text-white" type="button">Send</button>
+                </div>
+            </div>
+        </form>
+
+        </div>
+        <!--footer-->
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
